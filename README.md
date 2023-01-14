@@ -1,4 +1,4 @@
-# AISaturdays-JobOpportunities
+# AISaturdays-WiseJob
 Proyecto final AI Saturdays Euskadi 2023
 
 [AI Saturdays](https://saturdays.ai/) (o AI6) es una comunidad global comprometida con promover la educación en Inteligencia Artificial a través de contenido de calidad y el rigor de las mejores universidades.
