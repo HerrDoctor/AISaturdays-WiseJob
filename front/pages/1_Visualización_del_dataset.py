@@ -7,18 +7,15 @@ st.title('Nuestro dataset')
 st.write('A continuación proporcionamos una sencilla herramienta con la que poder visualizar y explorar, tanto de forma directa como gráfica, el dataset utilizado para desarrollar nuestro modelo')
 st.markdown("""---""")
 
-DATE_COLUMN = 'date/time'
-DATA_URL = ('dataset_reducido.csv')
-
 #Loading datasets
 
 def load_data(filename):
 	with gzip.open(filename, 'rb') as cf:
 		return pd.read_csv(cf)
 
-dataset = load_data('datasets/dataset.csv.gz')
-dataset_salary = load_data('datasets/dataset_salary.csv.gz')
-dataset_rating = load_data('datasets/dataset_rating.csv.gz')
+dataset = load_data('front/datasets/dataset.csv.gz')
+dataset_salary = load_data('front/datasets/dataset_salary.csv.gz')
+dataset_rating = load_data('front/datasets/dataset_rating.csv.gz')
 
 
 # Visualizing whole datasets
