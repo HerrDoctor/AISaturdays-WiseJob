@@ -1,4 +1,4 @@
-﻿import streamlit as st
+import streamlit as st
 import pandas as pd
 import numpy as np
 import gzip
@@ -22,11 +22,11 @@ def load_dataset_line(filename):
 	with gzip.open(filename, 'rb') as cf:
 		return pd.read_csv(cf, nrows=1)
 
-model_salary = load_model('models/model_salary.joblib.gz')
-model_rating = load_model('models/model_rating.joblib.gz')
+model_salary = load_model('front/models/model_salary.joblib.gz')
+model_rating = load_model('front/models/model_rating.joblib.gz')
 
-dataset_salary = load_dataset_line('datasets/dataset_salary.csv.gz').drop(columns=['Unnamed: 0', 'Job Title', 'Salary Estimate', 'Job Description', 'Location', 'Rating', 'Headquarters', 'Size', 'desc_words', 'salary'])
-dataset_rating = load_dataset_line('datasets/dataset_rating.csv.gz').drop(columns=['Unnamed: 0', 'Job Title', 'Salary Estimate', 'Job Description', 'Location', 'Rating', 'Headquarters', 'Size', 'scope_DataAnalyst', 'scope_DataEngineer', 'scope_DataScientist', 'desc_words', 'salary'])
+dataset_salary = load_dataset_line('front/datasets/dataset_salary.csv.gz').drop(columns=['Unnamed: 0', 'Job Title', 'Salary Estimate', 'Job Description', 'Location', 'Rating', 'Headquarters', 'Size', 'desc_words', 'salary'])
+dataset_rating = load_dataset_line('front/datasets/dataset_rating.csv.gz').drop(columns=['Unnamed: 0', 'Job Title', 'Salary Estimate', 'Job Description', 'Location', 'Rating', 'Headquarters', 'Size', 'scope_DataAnalyst', 'scope_DataEngineer', 'scope_DataScientist', 'desc_words', 'salary'])
 
 salary_columns = dataset_salary.columns.tolist()
 rating_columns = dataset_rating.columns.tolist()
