@@ -4,6 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+joblib = "*"
+scikit-learn = "*"
 
 [dev-packages]
 
