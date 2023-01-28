@@ -19,7 +19,7 @@ st.markdown("""---""")
 
 st.title('Nuestro equipo')
 
-image = Image.open('team_photo.png')
+image = Image.open('front/team_photo.png')
 
 st.image(image, caption='')
 
