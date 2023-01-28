@@ -38,7 +38,7 @@ st.markdown("""---""")
 
 # Choosing and showing graphic
 st.subheader('Representación gráfica de los datos del dataset escogido')
-graphic = st.radio("Escoge la gráfica a visualizar con el dataset seleccionado", ('Valoración de la calidad del empleo', 'Salario estimado', 'Lugar de trabajo', 'Habilidad: Python', 'Habilidad: SQL', 'Habilidad: Azure'))
+graphic = st.radio("Escoge la gráfica a visualizar con el dataset seleccionado", ('Valoración de la calidad del empleo', 'Salario estimado', 'Lugar de trabajo', 'Habilidad: Machine Learning', 'Habilidad: SQL', 'Habilidad: Azure'))
 
 if graphic == 'Valoración de la calidad del empleo':
 	st.subheader('Valoración entre 1 y 5')
@@ -49,9 +49,9 @@ if graphic == 'Salario estimado':
 if graphic == 'Lugar de trabajo':
 	st.subheader('Lugar de trabajo')
 	st.bar_chart(dataset, width=0,height=0, y='location_cat', use_container_width=True)
-if graphic == 'Habilidad: Python':
-	st.subheader('Habilidad: Python')
-	st.bar_chart(chosen_dataset, width=0,height=0, y='python', use_container_width=True)
+if graphic == 'Habilidad: Machine Learning':
+	st.subheader('Habilidad: Machine Learning')
+	st.bar_chart(chosen_dataset, width=0,height=0, y='machine learning', use_container_width=True)
 if graphic == 'Habilidad: SQL':
 	st.subheader('Habilidad: SQL')
 	st.bar_chart(chosen_dataset, width=0,height=0, y='sql', use_container_width=True)
